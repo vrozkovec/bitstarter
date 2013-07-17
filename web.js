@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  fs.readFileSync('~/src/bitstarter/index.html', function (err, data) {
+  fs.readFileSync('/home/ubuntu/src/bitstarter/index.html', function (err, data) {
       if (err) throw err;
       var buffer = new Buffer(data, 'utf-8');
       console.log(buffer.toString('utf-8'));
